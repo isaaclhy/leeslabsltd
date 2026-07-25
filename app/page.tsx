@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AppsAccordion, type AppEntry } from "./components/AppsAccordion";
 
 const apps: AppEntry[] = [
@@ -66,8 +67,14 @@ export default function Home() {
           <AppsAccordion apps={apps} />
         </section>
 
-        <footer className="rise-in rise-in-delay-3 mt-auto pt-20 text-sm text-muted">
-          © {new Date().getFullYear()} Lees Labs Ltd
+        <footer className="rise-in rise-in-delay-3 mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-20 text-sm text-muted">
+          <span>© {new Date().getFullYear()} Lees Labs Ltd</span>
+          <Link href="/terms" className="transition-colors hover:text-foreground">
+            Terms of Use
+          </Link>
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
+            Privacy
+          </Link>
         </footer>
       </main>
     </div>
