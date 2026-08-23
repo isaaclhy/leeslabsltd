@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteFooter } from "./SiteFooter";
 
 export function LegalPage({
   title,
@@ -22,15 +23,7 @@ export function LegalPage({
         <div className="mt-8 space-y-5 text-[0.975rem] leading-relaxed text-muted [&_h2]:mt-8 [&_h2]:text-base [&_h2]:font-semibold [&_h2]:text-foreground [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5">
           {children}
         </div>
-        <footer className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-20 text-sm text-muted">
-          <span>© {new Date().getFullYear()} Lees Labs Ltd</span>
-          <Link href="/terms" className="transition-colors hover:text-foreground">
-            Terms of Use
-          </Link>
-          <Link href="/privacy" className="transition-colors hover:text-foreground">
-            Privacy
-          </Link>
-        </footer>
+        <SiteFooter />
       </main>
     </div>
   );
