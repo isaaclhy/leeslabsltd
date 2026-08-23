@@ -3,6 +3,14 @@ import { AppsAccordion, type AppEntry } from "./components/AppsAccordion";
 
 const apps: AppEntry[] = [
   {
+    id: "nighty",
+    name: "Nighty — Sleep and Sound",
+    icon: "/apps/nighty.jpg",
+    iconAlt: "Nighty app icon",
+    description:
+      "A sound library to help you unwind and fall asleep — calming audio designed for better rest.",
+  },
+  {
     id: "fab",
     name: "fab",
     icon: "/apps/fab.png",
