@@ -3,10 +3,20 @@ import { SiteFooter } from "./components/SiteFooter";
 
 const apps: AppEntry[] = [
   {
+    id: "gonaughty",
+    name: "GoNaughty — Hot Games",
+    icon: "/apps/gonaughty.jpg",
+    iconAlt: "GoNaughty app icon",
+    description:
+      "Hot games for couples and adults — playful prompts and challenges to turn up the heat.",
+  },
+  {
     id: "nighty",
     name: "Nighty — Sleep and Sound",
     icon: "/apps/nighty.jpg",
     iconAlt: "Nighty app icon",
+    struck: true,
+    status: "Can't find a good marketing method",
     description:
       "A sound library to help you unwind and fall asleep — calming audio designed for better rest.",
   },
@@ -15,7 +25,8 @@ const apps: AppEntry[] = [
     name: "fab",
     icon: "/apps/fab.png",
     iconAlt: "FAB app icon",
-    status: "Coming soon",
+    struck: true,
+    status: "Can't find a good marketing method",
     description:
       "A women's manifestation app — designed to help you set intentions, stay grounded, and bring what you want into focus.",
   },

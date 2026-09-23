@@ -9,6 +9,7 @@ export type AppEntry = {
   icon: string;
   iconAlt: string;
   status?: string;
+  struck?: boolean;
   description: string;
   highlights?: string[];
 };
@@ -34,10 +35,18 @@ export function AppsAccordion({ apps }: { apps: AppEntry[] }) {
                 alt={app.iconAlt}
                 width={48}
                 height={48}
-                className="size-12 shrink-0 rounded-[12px] shadow-sm"
+                className={`size-12 shrink-0 rounded-[12px] shadow-sm ${
+                  app.struck ? "opacity-50" : ""
+                }`}
               />
               <span className="min-w-0 flex-1">
-                <span className="block text-lg font-medium tracking-tight text-foreground">
+                <span
+                  className={`block text-lg font-medium tracking-tight ${
+                    app.struck
+                      ? "text-muted line-through decoration-muted/70"
+                      : "text-foreground"
+                  }`}
+                >
                   {app.name}
                 </span>
                 {app.status ? (
