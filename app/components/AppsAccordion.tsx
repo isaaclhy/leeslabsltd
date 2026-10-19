@@ -12,6 +12,7 @@ export type AppEntry = {
   struck?: boolean;
   description: string;
   highlights?: string[];
+  storeUrl?: string;
 };
 
 export function AppsAccordion({ apps }: { apps: AppEntry[] }) {
@@ -94,6 +95,16 @@ export function AppsAccordion({ apps }: { apps: AppEntry[] }) {
                         </li>
                       ))}
                     </ul>
+                  ) : null}
+                  {app.storeUrl ? (
+                    <p className="mt-4">
+                      <a
+                        href={app.storeUrl}
+                        className="text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+                      >
+                        View on the App Store
+                      </a>
+                    </p>
                   ) : null}
                 </div>
               </div>

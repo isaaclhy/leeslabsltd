@@ -41,6 +41,7 @@ const apps: AppEntry[] = [
       "Top 100 Card Games in the UK on the App Store",
       "More than 10 million cards swiped",
     ],
+    storeUrl: "/go/spill-it",
   },
 ];
 
